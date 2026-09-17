@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#123b32" />
+  <title>السراج المنير</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="lamp-mark" aria-hidden="true">✦</div>
+    <h1>السراج المنير</h1>
+    <p>القرآن • الصلاة • الذكر</p>
+  </div>
+
+  <main id="app" class="app hidden">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">السراج المنير</span>
+        <h2 id="welcome">السلام عليكم</h2>
+      </div>
+      <button id="themeBtn" class="icon-btn" aria-label="تبديل المظهر">◐</button>
+    </header>
+
+    <section class="hero-card">
+      <div>
+        <span class="muted">الصلاة القادمة</span>
+        <h3 id="nextPrayerName">—</h3>
+        <p id="nextPrayerTime">سيتم تفعيل المواقيت بعد ربط الموقع</p>
+      </div>
+      <div class="countdown" id="prayerCountdown">--:--</div>
+    </section>
+
+    <section>
+      <div class="section-head"><h3>متابعة القراءة</h3></div>
+      <article class="continue-card">
+        <div>
+          <strong id="lastSurah">ابدأ أول قراءة</strong>
+          <span id="lastAyah">سيُحفظ موضعك تلقائيًا</span>
+        </div>
+        <button class="primary-btn" data-route="quran">فتح القرآن</button>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head"><h3>الخدمات</h3></div>
+      <div class="service-grid">
+        <button class="service" data-route="quran"><span>ق</span><b>القرآن</b><small>قراءة واستماع</small></button>
+        <button class="service" data-route="khatma"><span>خ</span><b>الختمة</b><small>خطة يومية</small></button>
+        <button class="service" data-route="prayer"><span>ص</span><b>الصلاة</b><small>المواقيت والقبلة</small></button>
+        <button class="service" data-route="adhkar"><span>ذ</span><b>الأذكار</b><small>وردك اليومي</small></button>
+        <button class="service" data-route="reciters"><span>ر</span><b>القراء</b><small>التلاوات</small></button>
+        <button class="service" data-route="bookmarks"><span>ح</span><b>المحفوظات</b><small>العلامات والمفضلة</small></button>
+      </div>
+    </section>
+
+    <section id="adminEntry" class="admin-entry hidden">
+      <button class="admin-btn" data-route="admin">لوحة الإدارة</button>
+    </section>
+
+    <section id="screen" class="screen-card hidden"></section>
+  </main>
+
+  <nav id="bottomNav" class="bottom-nav hidden" aria-label="التنقل الرئيسي">
+    <button class="active" data-route="home">الرئيسية</button>
+    <button data-route="quran">القرآن</button>
+    <button data-route="khatma">الختمة</button>
+    <button data-route="prayer">الصلاة</button>
+    <button data-route="profile">حسابي</button>
+  </nav>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
